@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} LAB Test {% endblock title %}
+{% block testactive %}active{% endblock testactive %}
+
+{% block body %}
+
+<div class="container">
+
+
+    <!-- <h6 class="text-center mb-1 mt-1">
+        <marquee behavior="scroll" scrollamount="10" direction="left">LAB Test Avialable at Our Centers</marquee>
+    </h6><br> -->
+
+    <p>Search By: <a href="" class="text-decoration-none"> Free Test</a>,<a href="" class="text-decoration-none"> Health
+            Packages</a>, <a href="" class="text-decoration-none"> Offers</a>, <a href="" class="text-decoration-none">
+            Disorders Test</a>, <a href="" class="text-decoration-none"> Conditional's Test</a> </p>
+
+    <!-- ALL LAB TEST -->
+    <div class="row row-cols-1 row-cols-md-4 mb-2 mt-2 text-center">
+
+        <div class="col ">
+
+            <div class="card rounded-3 shadow-sm border-3 ">
+                <div class="card-body ">
+                    <h6 class="card-title pricing-card-title"><small class="text-muted fw-light">COMPLETE BLOOD COUNT;
+                            CBC</small></h6>
+                    <ul class="list-unstyled text-start" style="font-size: 15px;">
+                        <li class="text-muted"><i class="bi bi-info-circle "></i> No special preparation</li>
+                        <li class="text-muted"><i class="bi bi-calendar-check-fill"></i> Daily</li>
+                        <li class="text-muted"><i class="bi bi-file-earmark-pdf-fill"></i> Downloadable Results</li>
+                        <a href="#exampleModal" class="text-decoration-none" data-bs-toggle="modal">26 Parameter(s)
+                            Covered</a>
+                    </ul>
+                    <a href="#" class="btn btn-sm btn-outline-primary text-sm"><i class="bi bi-bag-plus-fill"></i>
+                        Book</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--Parametre Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalLabel">Test Details</p>
+                    <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="font-size: 14px;">
+                    <p><b> COMPLETE BLOOD COUNT: CBC </b><br>26 PARAMETER(S) COVERED</p>
+                    <p><b> SPECIMEN </b><br>3 ML (2 ML MIN.) WHOLE BLOOD IN 1 LAVENDER TOP (EDTA) TUBE. SHIP
+                        REFRIGERATED. DO NOT FREEZE.</p>
+                    <p><b>REPORT</b><br>DAILY</p>
+
+                    <div class="row row-cols-md-4">
+                        <div class="col">
+                            <p><b>METHOD </b> <br>ELECTRICAL IMPEDENCE, VCS</p>
+                        </div>
+                        <div class="col">
+                            <p><b>ROOM</b> <br> 6 HRS</p>
+                        </div>
+                        <div class="col">
+                            <p><b>REFRIGERATOR</b> <br> 48 HRS</p>
+                        </div>
+                        <div class="col">
+                            <p><b>FROZEN</b> <br> NA</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <p class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed btn btn-light btn-sm" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Parameter Required
+                                </button>
+                            </p>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <li>Blood</li>
+                                    <li>ABS.MONOCYTE COUNT</li>
+                                    <li>ABS.NEUTROPHIL COUNT</li>
+                                    <li>BANDS</li>
+                                    <li>BASOPHILS</li>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Ok</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ALL LAB TEST END -->
+
+</div>
+
+{% endblock body %}

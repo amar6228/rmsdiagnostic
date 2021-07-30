@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+{% block contactactive %}active{% endblock contactactive %}
+
+{% block body %}
+
+<div class="container mt-3">
+    
+    <h3 class="text-center">Contact Us Page</h3>
+
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                        <iframe ></iframe>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card shadow-lg"> 
+                <div class="card-body">
+                    
+                    <h5 class="card-title mb-2 text-center">Get in touch <i class="bi bi-chat-dots"></i></h5>
+                    <form method="POST" action="/contact/">
+                        {% csrf_token %}
+                        <div class="row g-3 mb-2">
+                            <div class="col-md-6 form-floating">
+                                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Your name" required >
+                                <label for="contact-name" >Your Name</label>
+                                </div>
+                                <div class="col-md-6 form-floating">
+                                <input type="email" id="contact-email" name="email" class="form-control" placeholder="Email" required >
+                                <label for="contact-email" >Email</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-2">
+                          <input type="tel" maxlength="10" id="contact-phone" name="phone" class="form-control" placeholder="Phone" required >
+                          <label for="contact-phone" >Phone</label>
+                        </div>
+        
+                        <div class="form-floating primary-textarea mb-2">
+                            <textarea id="contact-message" name="message" class="md-textarea form-control mb-0"  required placeholder="Your message" rows="5" style="padding-bottom: 1.2rem;"></textarea>
+                            <label for="contact-message">Your message</label>
+                          </div>
+
+                          <div class="d-grid mb-1">
+                            <button class="btn btn-success">Send message</button>
+                          </div>
+            
+                      </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

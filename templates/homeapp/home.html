@@ -1,0 +1,848 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
+{% block style %}
+<style>
+  @media (min-width: 1200px) {
+
+    .bgimg {
+      background-image: url('{% static "images/bg_img.jpg" %}');
+      background-repeat: no-repeat;
+      height: 400px;
+      width: auto;
+      background-size: cover;
+      background-position: center;
+    }
+
+  }
+
+  /*Hide in Other Small Devices */
+
+
+  /* Landscape tablets and medium desktops */
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+    .bgimg {
+      background-image: none;
+    }
+
+  }
+
+  /* Portrait tablets and small desktops */
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    .bgimg {
+      background-image: none;
+    }
+
+  }
+
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 767px) {
+
+    .bgimg {
+      background-image: none;
+    }
+
+  }
+
+  /* Portrait phones and smaller */
+  @media (max-width: 480px) {
+
+    .bgimg {
+      background-image: none;
+    }
+
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 60px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.952);
+  }
+
+  .carousel-control-prev i,
+  .carousel-control-next i {
+    font-size: 30px;
+    position: absolute;
+    top: 80%;
+    display: inline-block;
+    margin: 16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+
+  }
+
+  .carousel-control-prev i {
+    margin-left: -3px;
+  }
+
+  .carousel-control-next i {
+    margin-right: -3px;
+  }
+
+  .second-txt {
+    position: absolute;
+    bottom: 1px;
+    left: 50px;
+  }
+
+  .imgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+
+<!-- Header Home -->
+<div class="container-fluid col-xxl mb-2 bgimg" style="background-color: wheat;">
+
+  <div class="row mb-2">
+    <div class="col-md-4 offset-md-1  ">
+      <div class="row g-0  card border-3 mt-1 shadow-lg overflow-hidden flex-md-row mb-4  h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h6 class="mb-3 text-center">View Test Report- <i class="mb-1 text-muted">Nov 12</i></h6>
+          <form action="" class="form-group">
+            <input class="form-control" type="text" name="centre_code" id="" placeholder="Center Code">
+            <input class="form-control mt-2" type="text" name="testid" id="" placeholder="Test Id">
+            <input class="form-control mt-2" type="text" name="phone" id="" placeholder="Phone">
+            <button class="d-grid col-8 mx-auto btn btn-sm btn-success mt-2">submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class="row g-0 mt-1 rounded overflow-hidden flex-md-row mb-2 h-md-250 position-relative">
+        <strong class="d-inline-block text-center text-success mt-1">-Authorised Collection Centre</strong>
+
+        <div class=" col p-4 flex-column d-flex position-static">
+          <!--      -->
+
+          <div id="carouselExampleSlidesOnly" class="carousel slide img-thumbnail" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'images/rms_moto.jpg' %}" class="d-block w-100" style="height: 280px; width: auto;"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/lab1.jpg' %}" class="d-block w-100" style="height: 280px; width: auto;"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'images/lab2.jpg' %}" class="d-block w-100" style="height: 280px; width: auto;"
+                  alt="...">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container mt-3">
+
+  <!-- Book Home Collections href=/test-->
+<div class="row mb-3">
+  <div class="card text-center   border rounded overflow-hidden ">
+
+    <h5 class="mb-2 card-title ">Book Home Collections- <small class="text-muted">12 Nov</small></h5>
+    <div class="row row-cols-3 row-cols-md-3">
+
+      <div class="col-md-4 "><img src="{% static 'images/timeicon1.png' %}" class="imgcenter" alt="icons"
+          style="width: 80px; height: 80px;">Time Saving <br> & Convenient</div>
+      <div class="col-md-4 "><img src="{% static 'images/homeicon.png' %}" class="imgcenter" alt="icons"
+          style="width: 80px; height: 80px;">Free Home collection <br> & Cancellation</div>
+      <div class="col-md-4 "><img src="{% static 'images/onlineicon1.png' %}" class="imgcenter" alt="icons"
+          style="width: 80px; height: 80px;">Online Query <br> & Dwonload Report</div>
+
+    </div>
+    <a href="/test" class="float-center mx-auto btn btn-sm btn-warning my-2 " >BOOK NOW</a>
+    <small style="font-size: 16px;">Not sure about the test <a href="/contact">click here</a></small>
+
+  </div>
+</div>
+
+  <!-- Packages 3 card href=/packages -->
+  <div class="row mb-1 ">
+
+    <div class="col-sm-4">
+      <div class="card shadow">
+        <div class="card-body btn">
+          <div class="row row-cols-2">
+            <div class="col"><img src="{% static 'images/diabetes1.jpg' %}" alt="" class=""
+                style="width: auto; height: 100px;"></div>
+            <div class="col"> <a href="/packages" class=" text-decoration-none text-sm">Diabeties Package</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card shadow">
+        <div class="card-body btn">
+          <div class="row row-cols-2">
+            <div class="col"><img src="{% static 'images/pregnency.jpg' %}" alt="" class=""
+                style="width: auto; height: 100px;"></div>
+            <div class="col"> <a href="/packages" class=" text-decoration-none text-sm">Pregnency Package</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card shadow">
+        <div class="card-body btn">
+          <div class="row row-cols-2">
+            <div class="col"><img src="{% static 'images/happy_family.jpg' %}" alt="" class=""
+                style="width: auto; height: 100px;"></div>
+            <div class="col"> <a href="/packages" class=" text-decoration-none text-sm">Swastha Fit Package</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Health Packages href=/packages -->
+  <div class="row">
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      Health Package's _____________________________________________________
+    </h5>
+    <div class="row row-cols-1 row-cols-md-4 mb-2 ">
+
+      <div class="col d-flex ">
+        <div class="card border shadow">
+          <div class="card-body p-2 m-1">
+            <h6 class="card-title text-sm">Swastha fit screen Package</h6>
+            <p class="card-text text-sm">Glucose Fasting, Thyroid Profile Total (T3 Total, T4 Total, TSH), Lipid Profile
+              Screen (Cholestrol Total, Triglycerides,... </p><br>
+            <p><a href="/packages" class="card-link text-decoration-none"><del class="text-muted">₹1199</del> ₹699 <i
+                  class="bi bi-arrow-right-circle-fill float-end shadow"></i></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex ">
+        <div class="card border shadow">
+          <div class="card-body p-2 m-1">
+            <h6 class="card-title text-sm">Swasthafit Basic Health Checkup</h6>
+            <p class="card-text text-sm"> Glucose Fasting, Thyroid Profile Total (T3 Total, T4 Total, TSH), Lipid
+              Profile
+              Screen (Cholestrol Total, Triglycerides,... </p><br>
+            <p><a href="/packages" class="card-link text-decoration-none"><del class="text-muted">₹1199</del> ₹699 <i
+                  class="bi bi-arrow-right-circle-fill float-end shadow"></i></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex ">
+        <div class="card border shadow">
+          <div class="card-body p-2 m-1">
+            <h6 class="card-title text-sm">Swasthafit Advanced Health Checkup-Full Body Checkup</h6>
+            <p class="card-text text-sm"> Glucose Fasting, C-Reactive Protein, Thyroid Profile Total (T3 Total, T4
+              Total,
+              TSH), Lipid Profile Screen </p>
+            <p><a href="/packages" class="card-link text-decoration-none"><del class="text-muted">₹1199</del> ₹699 <i
+                  class="bi bi-arrow-right-circle-fill float-end shadow"></i></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex ">
+        <div class="card border shadow">
+          <div class="card-body p-2 m-1">
+            <h6 class="card-title text-sm">Swasthafit Vitamin Health Package</h6>
+            <p class="card-text text-sm">Vitamin B12, Vitamin D 25 - Hydroxy...</p><br><br><br><br>
+            <p><a href="/packages" class="card-link text-decoration-none "><del class="text-muted">₹1199</del> ₹699 <i
+                  class="bi bi-arrow-right-circle-fill float-end shadow"></i></a></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Test By Condition's href=/test -->
+  <div class="row">
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      Test By Condition's _____________________________________________________
+    </h5>
+    <div class="row mb-3 ">
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">HIV</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Infertility</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Viral Infections</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Heart Disease</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3 ">
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Diabestes</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Hypertension</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Fever</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card border-3 rounded-pill">
+          <a href="/test" class="btn btn-light p-2 border-3 rounded-pill">Allergy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Life Cycle Disorder sliding href=/test/disorder-->
+  <div class="row">
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      Life Cycle Disorder _____________________________________________________
+    </h5>
+    <div class="row">
+      <div id="carousel123" class="carousel slide overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner mx-auto">
+
+          <div class="carousel-item active px-4 ">
+            <div class="row ">
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/heart.jpg' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      Hearts
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/kidney.jpg' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      kidney
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/allergy.png' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      Allergy
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/thyroid.png' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      Thyroid
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/lungs.png' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      Lungs
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/rms_logo.jpg' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      Logo
+                    </h6>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item px-4 ">
+            <div class=" row ">
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/cbctest1.jpeg' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      CBC
+                    </h6>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-2">
+                <a href="/test">
+                  <div class="card"><img src="{% static 'images/rms_logo.jpg' %}" alt="" class="card-img-top "
+                      style="width: auto; height: 150px;">
+                    <h6 class="second-txt">
+                      Logo
+                    </h6>
+                  </div>
+                </a>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- #carouselControls -->
+        <button class="carousel-control-prev" type="button" data-bs-target=" #carousel123" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target=" #carousel123" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- logistic photo sliding-->
+  <div class="row">
+
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      Logistic Strength _____________________________________________________
+    </h5>
+
+    <div class="row mx-auto">
+
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="col-md-12">
+              <div class="card position-relative">
+                <img src="{% static 'images/rms_logistic.svg' %}" class="d-block w-100"
+                  style="height: auto; width: auto;" alt="...">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="col-md-12">
+              <div class="card position-relative">
+                <img src="{% static 'images/rms_logistic.svg' %}" class="d-block w-100"
+                  style="height: auto; width: auto;" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="col-md-12">
+        <div class="card position-relative">
+          <img src="{% static 'images/rms_logistic.svg' %}" class="d-block w-100" style="height: auto; width: auto;"
+            alt="...">
+        </div>
+      </div> -->
+
+    </div>
+
+  </div>
+
+  <!-- Offers & anouncement Package href=/offers -->
+  <div class="row">
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      Offers & Anouncement __________________________________________ <a href="#"
+        class="text-decoration-none text-primary">All Offer's</a>
+    </h5>
+    <div class="row mb-2 mx-auto">
+
+      <div class="col-sm-3  ">
+
+        <a href="/offers" class="text-decoration-none  card border shadow">
+          <div class="card-body p-2 m-1">
+            <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+              style="width: auto; height: 150px;">
+            <p class="card-text text-sm"></p>
+            <p><del class="text-muted">₹1199</del> ₹699 <i class="bi bi-arrow-right-circle-fill float-end"></i></p>
+          </div>
+        </a>
+
+
+      </div>
+
+      <div class="col-sm-3 ">
+        <a href="/offers" class="text-decoration-none  card border shadow">
+          <div class="card-body p-2 m-1">
+            <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+              style="width: auto; height: 150px;">
+            <p class="card-text text-sm"></p>
+            <p><del class="text-muted">₹1199</del> ₹699 <i class="bi bi-arrow-right-circle-fill float-end"></i></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-3 ">
+        <a href="/offers" class="text-decoration-none  card border shadow">
+          <div class="card-body p-2 m-1">
+            <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+              style="width: auto; height: 150px;">
+            <p class="card-text text-sm"></p>
+            <p><del class="text-muted">₹1199</del> ₹699 <i class="bi bi-arrow-right-circle-fill float-end"></i></p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card position-relative">
+          <img src="{% static 'images/rms_moto2.png' %}" class="img-thumbnail d-block w-100"
+            style="height: 180px; width: auto;" alt="...">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card position-relative">
+          <img src="{% static 'images/rms_moto2.png' %}" class="img-thumbnail d-block w-100"
+            style="height: 180px; width: auto;" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog slide href=/blog -->
+  <div class="row">
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      Blog _____________________________________________________
+    </h5>
+
+    <div class="row">
+      <div id="carouselExampleSlidesOnly" class="carousel slide overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner px-2">
+
+          <div class="carousel-item active">
+
+            <div class="row ">
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+
+            <div class="row ">
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/rms_logo.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="carousel-item">
+
+            <div class="row ">
+
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card">
+                  <a href="/blog" class="btn">
+                    <img src="{% static 'images/diabetes.jpg' %}" alt="" class="card-img-top img-thumbnail"
+                      style="width: auto; height: 150px;">
+                    <div class="card-body">
+                      <h6 class="card-title"><small>Card Title</small></h6>
+                      <p class="card-text"><small>This line of text is meant to be treated as fine print.</small></p>
+
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!--  What people's says about us models=Feedback href=/feedback-->
+  <div class="row">
+    <h5 class="pb-1 mb-2 mt-4 fst-italic border-bottom">
+      What people's says about us ___________ <a href="/about" class="text-decoration-none text-primary"> About
+        Us___________</a>
+    </h5>
+
+    <div class="row mb-2 mx-auto">
+
+      <div class="col-sm-6">
+
+        <div class="row ">
+
+          <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner rounded">
+
+              <div class="carousel-item active">
+                <div class="col-sm position-static overflow-hidden ">
+                  <div class="card text-center" style="background-color: lightblue;">
+                    <div class="card-body p-2 m-1">
+                      <h6 class="card-title text-sm">Abhinav say's</h6>
+                      <p class="text-muted text-sm">good test dfhbdfbh hbfg </p>
+                      <span class="text-muted text-sm">Patna, Bihar- 21 Nov</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-sm position-static overflow-hidden ">
+                  <div class="card text-center" style="background-color: lightblue;">
+                    <div class="card-body p-2 m-1">
+                      <h6 class="card-title text-sm">Kundan say's</h6>
+                      <p class="text-muted text-sm">Nice job and</p>
+                      <span class="text-muted text-sm">Madhepura, Bihar- 21 Nov</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row p-1 mt-2">
+          <div class="col-sm position-relative overflow-hidden d-flex">
+            <div class="card img-thumbnail ">
+              <div class="card-body p-1 m-1 " style="background-color: khaki;">
+                <p class="card-title text-sm"><b>Feedback </b><i class="bi bi-chat-text"></i><br><small>Query,
+                    Questions,
+                    Comments about our service?
+                    We look forward to hearing from you!</small></p>
+                <a href="/feedback" class="text-decoration-none p-0"><small class="text-sm">Give Feedback</small></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 d-inline-block">
+        <div class="card overflow-hidden">
+
+          <iframe class="img-thumbnail" src="https://www.youtube.com/embed/UcFDdfueQRg"
+            style="height: 400px; width: auto;">
+          </iframe>
+
+
+
+          <!-- <img src="{% static 'images/rms_moto2.png' %}" class="img-thumbnail d-block w-100"
+            style="height: 450px; width: auto;" alt="...">https://youtu.be/UcFDdfueQRg-->
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+</div>
+
+
+<!--  -->
+<br>
+<div class="container mt-2">
+  <div class="col-md-12">
+    <h3 class="pb-2 mb-2 fst-italic border-bottom">
+      From the RmsDiagnostic
+    </h3>
+
+    <article class="blog-post">
+      <h6 class="blog-post-title">Sample blog post</h6>
+      <p class="blog-post-meta">January 1, 2021 by <a href="#">Mark</a></p>
+
+      <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic
+        typography, lists, tables, images, code, and more are all supported as expected.</p>
+      <hr>
+      <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show
+        how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration
+        flowing, so be on the lookout for this exact same string of text.</p>
+
+      <p>This is an example blockquote in action:</p>
+    </article>
+
+  </div>
+
+</div>
+
+
+
+{% endblock body %}
